@@ -1,0 +1,57 @@
+# Server Stats (Go)
+
+A simple CLI tool written in Go to display basic Linux/Windows server performance stats.
+
+## Features
+
+- CPU usage
+- Memory usage (with GB conversion)
+- Disk usage
+- Top 5 processes by CPU
+- Top 5 processes by memory
+
+## Requirements
+
+- Go 1.23+
+- Linux, macOS, or Windows
+
+## Install
+
+```bash
+git clone https://github.com/navaparvaz/server-stats-go.git
+cd server-stats-go
+go mod tidy
+```
+
+## Usage
+
+```bash
+go run main.go
+```
+
+Or build and run:
+
+```bash
+go build -o server-stats
+./server-stats
+```
+
+## Example Output
+
+```
+CPU:    14.43%
+Memory: 53.00% (8.41/15.62 GB)
+Disk /: 52.27%
+
+=== Top 5 by CPU ===
+20016    vmware-vmx.exe          6.77%
+22132    chrome.exe              6.66%
+...
+
+=== Top 5 by Memory ===
+...
+```
+
+## Dependencies
+
+- [gopsutil](https://github.com/shirou/gopsutil) - System and process utilities
